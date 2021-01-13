@@ -5,9 +5,9 @@
 // "Do not repeat."
 // https://genuary2021.github.io/
 
-// https://en.wikipedia.org/wiki/Heap's_algorithm#cite_note-3
+// https://en.wikipedia.org/wiki/Heap's_algorithm
 
-let word = "genuary";
+let w = "genuary";
 let permutations = [];
 const MAX_Y = 691;
 
@@ -19,7 +19,7 @@ function setup() {
   textAlign(LEFT, TOP);
   noLoop();
    
-  heap_algo(word, word.length);
+  heap_algo(w, w.length);
 }
 
 function draw() {
@@ -27,7 +27,7 @@ function draw() {
   blendMode(DIFFERENCE);
   
   textSize(1);
-  let xunit = textWidth(word);
+  let xunit = textWidth(w);
   let n = 1;
   let size = width/xunit;
   let x = 0; y = 0;
@@ -53,17 +53,12 @@ function heap_algo(word, n) {
   }
   heap_algo(word, n-1);
   for (let i = 0; i < n-1; i++) {
-    if (i%2 == 0) {
-      word = swap(word, 0, n-1);
-    } else {
-      word = swap(word, i, n-1);
-    }
-    heap_algo(word, n-1);
+    heap_algo(swap(word, i, n-1), n-1);
   }
 }
 
 // Swap the characters at indices i and j (with i<j) in str, and return it
 function swap(str, i, j) {
   let a = str[i], b = str[j];
-  return str.substring(0, i) + b + str.substring(i+1, j) + a + str.substring(j+1);
+  return str.slice(0, i) + b + str.slice(i+1, j) + a + str.slice(j+1);
 }
