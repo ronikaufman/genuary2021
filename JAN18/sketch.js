@@ -5,8 +5,6 @@
 // "One process grows, another process prunes."
 // https://genuary2021.github.io/
 
-let probRec = 3/3;
-
 function setup() {
   createCanvas(512, 512);
   noStroke();
