@@ -27,36 +27,32 @@ function draw() {
     strokeWeight(2);
     
     if (i % 2 === 1) {
-	  // 1___
-	  //line(x, y, x + s, y + s);
+      // 1___
       arc(s/4, s/4, s/4, s/4, 0, PI, CHORD);
-	} else {
+    } else {
       circle(s/4, s/4, s/4);
     }
 	
-	if ((i/2) % 2 >= 1) {
-	  // _1__
-	  //line(x, y + s, x + s, y);
+    if ((i/2) % 2 >= 1) {
+      // _1__
       arc(3*s/4, s/4, s/4, s/4, 0, PI, CHORD);
-	} else {
+    } else {
       circle(3*s/4, s/4, s/4);
     }
 	
-	if ((i/4) % 2 >= 1) {
-	  // __1_
-	  //line(x, y + s/2, x + s, y + s/2);
+    if ((i/4) % 2 >= 1) {
+      // __1_
       line(s/2, 3*s/8, s/2, 4*s/8);
       line(s/2, s/2, 9*s/16, s/2);
-	} else {
+    } else {
       line(s/2, 3*s/8, s/2, 4*s/8);
       line(s/2, s/2, 7*s/16, s/2);
     }
 	
-	if ((i/8) % 2 >= 1) {
-	  // ___1
-	  //line(x + s/2, y, x + s/2, y + s);
+    if ((i/8) % 2 >= 1) {
+    // ___1
       arc(s/2, 5*s/8, s/4, s/4, 0, PI);
-	} else {
+    } else {
       arc(s/2, 6*s/8, s/4, s/4, PI, TWO_PI);
     }
     pop();
