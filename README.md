@@ -2,7 +2,7 @@
 
 Sketches made daily during 30 days for <a href = "https://genuary2021.github.io/">Genuary 2021</a>.  
 I gave myself extra constraints:
-- use only blue `rgb(0, 0, 255)` and yellow `rgb(255, 255, 0)` (not respected on days ;
+- use only blue `rgb(0, 0, 255)` and yellow `rgb(255, 255, 0)` (whenever possible);
 - 1:1 format;
 - no animation.
 
